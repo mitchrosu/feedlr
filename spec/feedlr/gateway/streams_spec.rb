@@ -11,7 +11,7 @@ describe Feedlr::Gateway::Streams, vcr: { record: :new_episodes } do
 
   describe '#stream_entries_ids' do
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/streams/'\
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/streams/'\
         "#{CGI.escape(stream)}/ids")
       .with(query: options.to_hash)
       subject = client.stream_entries_ids(stream, options)
@@ -28,7 +28,7 @@ describe Feedlr::Gateway::Streams, vcr: { record: :new_episodes } do
 
   describe '#stream_entries_contents' do
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/streams/'\
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/streams/'\
         "#{CGI.escape(stream)}/contents").with(query: options.to_hash)
 
       result = client.stream_entries_contents(stream, options)

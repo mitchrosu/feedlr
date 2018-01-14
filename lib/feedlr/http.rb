@@ -8,7 +8,7 @@ module Feedlr
   # Do all http requests and call the mapper
   module HTTP
     ENDPOINT = 'http://cloud.feedly.com'.freeze
-    SANDBOX_ENDPOINT = 'http://sandbox.feedly.com'.freeze
+    SANDBOX_ENDPOINT = 'http://sandbox7.feedly.com'.freeze
     API_VERSION = '/v3'.freeze
 
     private

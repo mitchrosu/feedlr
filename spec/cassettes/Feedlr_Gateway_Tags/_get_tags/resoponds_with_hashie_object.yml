@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/tags
+    uri: http://sandbox7.feedly.com/v3/tags
     body:
       encoding: US-ASCII
       string: ''

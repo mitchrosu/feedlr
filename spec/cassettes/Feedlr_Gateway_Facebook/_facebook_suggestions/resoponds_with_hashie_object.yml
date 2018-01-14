@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/facebook/suggestions
+    uri: http://sandbox7.feedly.com/v3/facebook/suggestions
     body:
       encoding: US-ASCII
       string: ''

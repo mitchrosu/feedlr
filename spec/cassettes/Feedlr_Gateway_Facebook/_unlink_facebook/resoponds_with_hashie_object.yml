@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://sandbox.feedly.com/v3/facebook/auth
+    uri: http://sandbox7.feedly.com/v3/facebook/auth
     body:
       encoding: US-ASCII
       string: ''

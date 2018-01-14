@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/shorten/entries/k3wM4lkt2uyzklIaZG%2FpiLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777
+    uri: http://sandbox7.feedly.com/v3/shorten/entries/k3wM4lkt2uyzklIaZG%2FpiLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777
     body:
       encoding: US-ASCII
       string: ''
@@ -44,7 +44,7 @@ http_interactions:
       - feedlyServer/1.1
     body:
       encoding: UTF-8
-      string: '{"entryId":"k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777","shortUrl":"http://sandbox.feedly.com/e/Shqvh6hP","longUrl":"http://design-milk.com/disco-ball-inspired-scotch-club-lighting-collection/","via":"Feedlr
+      string: '{"entryId":"k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777","shortUrl":"http://sandbox7.feedly.com/e/Shqvh6hP","longUrl":"http://design-milk.com/disco-ball-inspired-scotch-club-lighting-collection/","via":"Feedlr
         sandbox client"}'
     http_version:
   recorded_at: Sat, 17 May 2014 12:39:51 GMT

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/opml
+    uri: http://sandbox7.feedly.com/v3/opml
     body:
       encoding: UTF-8
       string: |2-

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/markers
+    uri: http://sandbox7.feedly.com/v3/markers
     body:
       encoding: UTF-8
       string: '{"feedIds":["feed/http://feeds.engadget.com/weblogsinc/engadget","feed/http://www.yatzer.com/feed/index.php"],"action":"undoMarkAsRead","type":"feeds"}'

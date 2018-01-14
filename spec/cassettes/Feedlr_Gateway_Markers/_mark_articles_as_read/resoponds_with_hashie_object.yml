@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/markers
+    uri: http://sandbox7.feedly.com/v3/markers
     body:
       encoding: UTF-8
       string: '{"entryIds":["qXKMwD+H9w7rc42rGNxj3U1BuAKE5TpW1EZAANkzhmk=_145e2cb3a50:2c3:592195db","qXKMwD+H9w7rc42rGNxj3U1BuAKE5TpW1EZAANkzhmk=_145b9cdf580:544:7f4ba42e"],"action":"markAsRead","type":"entries"}'

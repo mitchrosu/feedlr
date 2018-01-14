@@ -6,7 +6,7 @@ describe Feedlr::Gateway::Profile, vcr: { record: :new_episodes } do
   describe '#profile'  do
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/profile')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/profile')
 
       client.user_profile
       expect(stub).to have_been_requested
@@ -22,7 +22,7 @@ describe Feedlr::Gateway::Profile, vcr: { record: :new_episodes } do
   describe '#update_profile' do
     let(:profile) { { gender: 'female', fullName: 'Best lady' } }
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/profile')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/profile')
       .with(body: MultiJson.dump(profile.to_hash))
       client.update_profile(profile)
       expect(stub).to have_been_requested

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/search/feeds?n=30&q=technology
+    uri: http://sandbox7.feedly.com/v3/search/feeds?n=30&q=technology
     body:
       encoding: US-ASCII
       string: ''

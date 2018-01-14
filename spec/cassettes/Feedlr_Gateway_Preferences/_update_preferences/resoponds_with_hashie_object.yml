@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/preferences
+    uri: http://sandbox7.feedly.com/v3/preferences
     body:
       encoding: UTF-8
       string: '{"category/reviews/entryOverviewSize":0,"category/photography/entryOverviewSize":7}'

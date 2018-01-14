@@ -19,7 +19,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
   describe '#user_unread_counts' do
     let(:options) { { autorefresh: '1' } }
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/markers/counts')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/markers/counts')
       .with(query: options.to_hash)
       client.user_unread_counts(options)
       expect(stub).to have_been_requested
@@ -43,7 +43,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
 
   describe '#mark_articles_as_read' do
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
       .with(body: MultiJson.dump(
               entryIds: articles_ids.to_ary,
               action: 'markAsRead',
@@ -70,7 +70,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
 
   describe '#mark_articles_as_unread' do
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
       .with(body: MultiJson.dump(
               entryIds: articles_ids.to_ary,
               action: 'keepUnread',
@@ -105,7 +105,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
         'k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777'
       end
       it 'sends a post request' do
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
         .with(body: MultiJson.dump(
                 feedIds: feeds_ids.to_ary,
                 action: 'markAsRead',
@@ -126,7 +126,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
     context 'with asOf param' do
       let(:asOf) { '1400876097' }
       it 'sends a post request' do
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
         .with(body: MultiJson.dump(
                 feedIds: feeds_ids.to_ary,
                 action: 'markAsRead',
@@ -165,7 +165,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
         'k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777'
       end
       it 'sends a post request' do
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
         .with(body: MultiJson.dump(
                 categoryIds: categories_ids.to_ary,
                 action: 'markAsRead',
@@ -188,7 +188,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
     context 'with asOf param' do
       let(:asOf) { '1400876097' }
       it 'sends a post request' do
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
         .with(body: MultiJson.dump(
                 categoryIds: categories_ids.to_ary,
                 action: 'markAsRead',
@@ -218,7 +218,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
 
   describe '#undo_mark_feeds_as_read' do
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
       .with(body: MultiJson.dump(
               feedIds: feeds_ids.to_ary,
               action: 'undoMarkAsRead',
@@ -245,7 +245,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
 
   describe '#undo_mark_categories_as_read' do
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/markers')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/markers')
       .with(body: MultiJson.dump(
               categoryIds: categories_ids.to_ary,
               action: 'undoMarkAsRead',
@@ -264,7 +264,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
   describe '#sync_read_counts' do
     let(:options) { { newerThan: '1400876097' } }
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/markers/reads')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/markers/reads')
       .with(query: options.to_hash)
       client.sync_read_counts(options)
       expect(stub).to have_been_requested
@@ -279,7 +279,7 @@ describe Feedlr::Gateway::Markers, vcr: { record: :new_episodes } do
   describe '#lastest_tagged_entries' do
     let(:options) { { newerThan: '1400876097' } }
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/markers/tags')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/markers/tags')
       .with(query: options.to_hash)
       client.lastest_tagged_entries(options)
       expect(stub).to have_been_requested

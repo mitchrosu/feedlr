@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/microsoft/oneNoteAdd
+    uri: http://sandbox7.feedly.com/v3/microsoft/oneNoteAdd
     body:
       encoding: UTF-8
       string: '{"entryId":"k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777"}'

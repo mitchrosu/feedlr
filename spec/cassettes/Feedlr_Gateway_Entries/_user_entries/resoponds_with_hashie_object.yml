@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/entries/.mget
+    uri: http://sandbox7.feedly.com/v3/entries/.mget
     body:
       encoding: UTF-8
       string: '{"continuation":null,"ids":["k3wM4lkt2uyzklIaZG/piLCFwWpRsuSz4luWQLHP0YY=_142814c6526:338b:2190d777","IUiZhV1EuO2ZMzIrc2Ak6NlhGjboZ+Yk0rJ8=_14605b9efb5:7a2b:aec60bc9"]}'

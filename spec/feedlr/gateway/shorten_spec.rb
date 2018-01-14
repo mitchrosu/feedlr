@@ -9,7 +9,7 @@ describe Feedlr::Gateway::Shorten, vcr: { record: :new_episodes } do
     end
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/shorten/entries/'\
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/shorten/entries/'\
         "#{CGI.escape(entry_id)}")
       client.shorten_entry(entry_id)
       expect(stub).to have_been_requested

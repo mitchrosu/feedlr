@@ -20,7 +20,7 @@ describe Feedlr::Gateway::Feeds, vcr: { record: :new_episodes } do
     end
 
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/feeds/.mget')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/feeds/.mget')
       .with(body: MultiJson.dump(feeds_ids.to_ary))
       client.feeds(feeds_ids)
       expect(stub).to have_been_requested

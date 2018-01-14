@@ -6,7 +6,7 @@ describe Feedlr::Gateway::Preferences, vcr: { record: :new_episodes } do
   describe '#preferences'  do
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/preferences')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/preferences')
       .to_return(body: '{ }')
       client.preferences
       expect(stub).to have_been_requested
@@ -24,7 +24,7 @@ describe Feedlr::Gateway::Preferences, vcr: { record: :new_episodes } do
         :'category/photography/entryOverviewSize' => 7 }
     end
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/preferences')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/preferences')
       .with(body: MultiJson.dump(preferences.to_hash))
       client.update_preferences(preferences)
       expect(stub).to have_been_requested

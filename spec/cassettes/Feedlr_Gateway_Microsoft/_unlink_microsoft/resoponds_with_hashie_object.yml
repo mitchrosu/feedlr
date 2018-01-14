@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://sandbox.feedly.com/v3/microsoft/liveAuth
+    uri: http://sandbox7.feedly.com/v3/microsoft/liveAuth
     body:
       encoding: US-ASCII
       string: ''

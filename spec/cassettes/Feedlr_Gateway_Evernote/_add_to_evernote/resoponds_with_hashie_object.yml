@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/evernote/note
+    uri: http://sandbox7.feedly.com/v3/evernote/note
     body:
       encoding: UTF-8
       string: '{"notebookName":"feedly notebook","comment":"user comment","url":"http://techcrunch.com/2014/03/05/evernote-adds-handwriting-to-its-android-app/","notebookType":"personal","notebookGuid":"bc1815a0-0a56-46aa-9dca-4c8a53a4eb42","tags":["tag1","tag2"]}'

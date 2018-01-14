@@ -6,7 +6,7 @@ describe Feedlr::Gateway::Subscriptions, vcr: { record: :new_episodes } do
   describe '#user_subscriptions' do
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/subscriptions')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/subscriptions')
       .to_return(body: '{ }')
       client.user_subscriptions
       expect(stub).to have_been_requested
@@ -31,7 +31,7 @@ describe Feedlr::Gateway::Subscriptions, vcr: { record: :new_episodes } do
             label: 'Art' }] }
     end
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/subscriptions')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/subscriptions')
       .with(body: MultiJson.dump(subscription.to_hash)).to_return(body: '{ }')
       client.add_subscription(subscription)
       expect(stub).to have_been_requested
@@ -55,7 +55,7 @@ describe Feedlr::Gateway::Subscriptions, vcr: { record: :new_episodes } do
             label: 'Art' }] }
     end
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/subscriptions')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/subscriptions')
       .with(body: MultiJson.dump(subscription.to_hash))
       client.update_subscription(subscription)
       expect(stub).to have_been_requested
@@ -70,7 +70,7 @@ describe Feedlr::Gateway::Subscriptions, vcr: { record: :new_episodes } do
   describe '#delete_subscription'  do
     let(:subscription_id) { 'feed/http://css-tricks.com/feed/' }
     it 'sends a delete request' do
-      stub = stub_request(:delete, 'http://sandbox.feedly.com/v3/'\
+      stub = stub_request(:delete, 'http://sandbox7.feedly.com/v3/'\
         "subscriptions/#{CGI.escape(subscription_id)}")
       client.delete_subscription(subscription_id)
       expect(stub).to have_been_requested

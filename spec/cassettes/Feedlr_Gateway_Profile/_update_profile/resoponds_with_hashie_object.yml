@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/profile
+    uri: http://sandbox7.feedly.com/v3/profile
     body:
       encoding: UTF-8
       string: '{"gender":"female","fullName":"Best lady"}'

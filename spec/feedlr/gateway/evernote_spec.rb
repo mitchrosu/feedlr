@@ -5,7 +5,7 @@ describe Feedlr::Gateway::Evernote, vcr: { record: :new_episodes } do
 
   describe '#unlink_evernote'  do
     it 'sends a delete request' do
-      stub = stub_request(:delete, 'http://sandbox.feedly.com/v3/evernote/auth')
+      stub = stub_request(:delete, 'http://sandbox7.feedly.com/v3/evernote/auth')
 
       client.unlink_evernote
       expect(stub).to have_been_requested
@@ -20,7 +20,7 @@ describe Feedlr::Gateway::Evernote, vcr: { record: :new_episodes } do
   describe '#evernote_notebooks'  do
     it 'sends a get request' do
       stub = stub_request(:get,
-                          'http://sandbox.feedly.com/v3/evernote/notebooks')
+                          'http://sandbox7.feedly.com/v3/evernote/notebooks')
 
       client.evernote_notebooks
       expect(stub).to have_been_requested
@@ -43,7 +43,7 @@ describe Feedlr::Gateway::Evernote, vcr: { record: :new_episodes } do
         tags: %w(tag1 tag2) }
     end
     it 'sends a get request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/evernote/note')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/evernote/note')
       .with(body: MultiJson.dump(entry.to_hash))
       client.add_to_evernote(entry)
       expect(stub).to have_been_requested

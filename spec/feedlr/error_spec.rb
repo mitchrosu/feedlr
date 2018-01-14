@@ -21,7 +21,7 @@ describe Feedlr::Error do
   Feedlr::Error.errors.each do |status, exception|
     context "when HTTP status is #{status}" do
       it "raises #{exception}" do
-        stub_request(:post, 'http://sandbox.feedly.com/v3/feeds/.mget')
+        stub_request(:post, 'http://sandbox7.feedly.com/v3/feeds/.mget')
           .to_return(status: status, body: '{}')
         expect { client.feed(feed_id) }.to raise_error(exception)
       end

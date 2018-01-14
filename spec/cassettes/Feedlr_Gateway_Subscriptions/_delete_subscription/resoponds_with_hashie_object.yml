@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://sandbox.feedly.com/v3/subscriptions/feed%2Fhttp:%2F%2Fcss-tricks.com%2Ffeed%2F
+    uri: http://sandbox7.feedly.com/v3/subscriptions/feed%2Fhttp:%2F%2Fcss-tricks.com%2Ffeed%2F
     body:
       encoding: US-ASCII
       string: ''

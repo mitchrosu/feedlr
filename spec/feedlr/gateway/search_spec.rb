@@ -7,7 +7,7 @@ describe Feedlr::Gateway::Search, vcr: { record: :new_episodes } do
   let(:options) { { n: '30' } }
   describe '#search_feeds' do
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/search/feeds')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/search/feeds')
       .with(query: { 'q' => query }.merge(options.to_hash))
       client.search_feeds(query, options)
       expect(stub).to have_been_requested
@@ -26,7 +26,7 @@ describe Feedlr::Gateway::Search, vcr: { record: :new_episodes } do
     end
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/search/contents')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/search/contents')
       .with(query: { q: query, streamId: stream }.merge(options.to_hash))
 
       result = client.search_stream(stream, query, options)

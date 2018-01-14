@@ -6,7 +6,7 @@ describe Feedlr::Gateway::Facebook, vcr: { record: :new_episodes } do
   describe '#unlink_facebook'  do
 
     it 'sends a delete request' do
-      stub = stub_request(:delete, 'http://sandbox.feedly.com/v3/facebook/auth')
+      stub = stub_request(:delete, 'http://sandbox7.feedly.com/v3/facebook/auth')
 
       client.unlink_facebook
       expect(stub).to have_been_requested
@@ -20,7 +20,7 @@ describe Feedlr::Gateway::Facebook, vcr: { record: :new_episodes } do
 
   describe '#facebook_suggestions' do
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/facebook/'\
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/facebook/'\
         'suggestions')
       client.facebook_suggestions
       expect(stub).to have_been_requested

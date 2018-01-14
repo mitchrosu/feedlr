@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/entries
+    uri: http://sandbox7.feedly.com/v3/entries
     body:
       encoding: UTF-8
       string: '{"title":"NBCs reviled sci-fi drama Heroes may get a second lease","author":"Nathan

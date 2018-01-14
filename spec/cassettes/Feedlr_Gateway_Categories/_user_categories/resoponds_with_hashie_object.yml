@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/categories
+    uri: http://sandbox7.feedly.com/v3/categories
     body:
       encoding: US-ASCII
       string: ''

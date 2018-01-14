@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sandbox.feedly.com/v3/subscriptions
+    uri: http://sandbox7.feedly.com/v3/subscriptions
     body:
       encoding: UTF-8
       string: '{"id":"feed/http://feeds.feedburner.com/design-milk","title":"Design

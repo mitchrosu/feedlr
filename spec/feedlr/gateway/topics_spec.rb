@@ -5,7 +5,7 @@ describe Feedlr::Gateway::Topics, vcr: { record: :new_episodes } do
 
   describe '#user_topics' do
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/topics')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/topics')
 
       client.user_topics
       expect(stub).to have_been_requested
@@ -23,7 +23,7 @@ describe Feedlr::Gateway::Topics, vcr: { record: :new_episodes } do
         interest: 'high' }
     end
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/topics')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/topics')
       .with(body: MultiJson.dump(topic.to_hash))
       client.add_topic(topic)
       expect(stub).to have_been_requested
@@ -41,7 +41,7 @@ describe Feedlr::Gateway::Topics, vcr: { record: :new_episodes } do
         interest: 'medium' }
     end
     it 'sends a post request' do
-      stub = stub_request(:post, 'http://sandbox.feedly.com/v3/topics')
+      stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/topics')
       .with(body: MultiJson.dump(topic.to_hash))
       client.update_topic(topic)
       expect(stub).to have_been_requested
@@ -59,7 +59,7 @@ describe Feedlr::Gateway::Topics, vcr: { record: :new_episodes } do
     end
     it 'sends a delete request' do
       stub = stub_request(:delete,
-                          'http://sandbox.feedly.com/v3/topics/'\
+                          'http://sandbox7.feedly.com/v3/topics/'\
                           "#{CGI.escape(topic_id)}")
 
       client.delete_topic(topic_id)

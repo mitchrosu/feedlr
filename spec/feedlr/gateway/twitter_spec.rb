@@ -5,7 +5,7 @@ describe Feedlr::Gateway::Twitter, vcr: { record: :new_episodes } do
 
   describe '#unlink_twitter'  do
     it 'sends a delete request' do
-      stub = stub_request(:delete, 'http://sandbox.feedly.com/v3/twitter/auth')
+      stub = stub_request(:delete, 'http://sandbox7.feedly.com/v3/twitter/auth')
 
       client.unlink_twitter
       expect(stub).to have_been_requested
@@ -20,7 +20,7 @@ describe Feedlr::Gateway::Twitter, vcr: { record: :new_episodes } do
   describe '#twitter_suggestions' do
     it 'sends a get request' do
       stub = stub_request(:get,
-                          'http://sandbox.feedly.com/v3/twitter/suggestions')
+                          'http://sandbox7.feedly.com/v3/twitter/suggestions')
       .to_return(body: '{ }')
       client.twitter_suggestions
       expect(stub).to have_been_requested

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sandbox.feedly.com/v3/streams/user%2F96cc52b7-a17f-4ce0-9b38-de1b6f08f156%2Fcategory%2FEntreprenuership/contents?count=30&unreadOnly=true
+    uri: http://sandbox7.feedly.com/v3/streams/user%2F96cc52b7-a17f-4ce0-9b38-de1b6f08f156%2Fcategory%2FEntreprenuership/contents?count=30&unreadOnly=true
     body:
       encoding: US-ASCII
       string: ''

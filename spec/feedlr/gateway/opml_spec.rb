@@ -6,7 +6,7 @@ describe Feedlr::Gateway::Opml, vcr: { record: :new_episodes } do
   describe '#user_opml'  do
 
     it 'sends a get request' do
-      stub = stub_request(:get, 'http://sandbox.feedly.com/v3/opml')
+      stub = stub_request(:get, 'http://sandbox7.feedly.com/v3/opml')
       .with(headers: { 'Content-Type' => 'text/xml' })
       client.user_opml
       expect(stub).to have_been_requested
@@ -23,7 +23,7 @@ describe Feedlr::Gateway::Opml, vcr: { record: :new_episodes } do
 
     context 'with input responds to #to_str' do
       it 'sends a post request' do
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/opml')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/opml')
         .with(headers:  { 'Content-Type' => 'text/xml' },
               body: File.open(file_path).read)
         client.import_opml(file_path)
@@ -34,7 +34,7 @@ describe Feedlr::Gateway::Opml, vcr: { record: :new_episodes } do
     context 'with input responds to #read' do
       it 'sends a post request' do
         file = File.open(file_path)
-        stub = stub_request(:post, 'http://sandbox.feedly.com/v3/opml')
+        stub = stub_request(:post, 'http://sandbox7.feedly.com/v3/opml')
         .with(headers:  { 'Content-Type' => 'text/xml' },
               body: file.read)
         file.rewind
